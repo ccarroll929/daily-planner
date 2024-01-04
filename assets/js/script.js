@@ -31,9 +31,8 @@ function getHours() {
   let currentTime = dayjs().hour();
   $(".time-block").each(function () {
     let plannerTime = parseInt($(this).attr("id"));
-
-
-  if (plannerTime < currentTime){
+  
+    if (plannerTime < currentTime){
     $(this).addClass("past");
   } else if (plannerTime === currentTime){
     $(this).removeClass("past");
